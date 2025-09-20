@@ -1,0 +1,38 @@
+/* SecurePass content script styles */
+
+.securepass-indicator {
+    position: absolute !important;
+    right: 8px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    font-size: 12px !important;
+    cursor: pointer !important;
+    z-index: 1000 !important;
+    background: rgba(0, 0, 0, 0.7) !important;
+    color: white !important;
+    padding: 2px 4px !important;
+    border-radius: 3px !important;
+    opacity: 0.7 !important;
+    transition: opacity 0.2s !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    line-height: 1 !important;
+    user-select: none !important;
+    pointer-events: auto !important;
+}
+
+.securepass-indicator:hover {
+    opacity: 1 !important;
+    background: rgba(0, 0, 0, 0.9) !important;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .securepass-indicator {
+        background: rgba(255, 255, 255, 0.8) !important;
+        color: black !important;
+    }
+    
+    .securepass-indicator:hover {
+        background: rgba(255, 255, 255, 0.95) !important;
+    }
+}

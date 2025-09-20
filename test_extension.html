@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page for SecurePass Extension</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="password"], input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            background: #007cba;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #005a87;
+        }
+        .instructions {
+            background: #f0f8ff;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>SecurePass Extension Test Page</h1>
+    
+    <div class="instructions">
+        <h3>How to test the SecurePass extension:</h3>
+        <ol>
+            <li>Make sure the SecurePass extension is installed and enabled</li>
+            <li>You should see a small lock icon (🔒) next to the password fields below</li>
+            <li>Click the lock icon to check password strength</li>
+            <li>Or click the SecurePass extension icon in your browser toolbar</li>
+        </ol>
+    </div>
+
+    <form>
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username">
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password">
+        </div>
+
+        <div class="form-group">
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password">
+        </div>
+
+        <div class="form-group">
+            <label for="current-password">Current Password:</label>
+            <input type="password" id="current-password" name="current-password" placeholder="Enter current password">
+        </div>
+
+        <div class="form-group">
+            <label for="new-password">New Password:</label>
+            <input type="password" id="new-password" name="new-password" placeholder="Enter new password">
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div style="margin-top: 30px; padding: 15px; background: #f9f9f9; border-radius: 4px;">
+        <h3>Test Passwords:</h3>
+        <p><strong>Weak:</strong> password123</p>
+        <p><strong>Medium:</strong> MyPassword123</p>
+        <p><strong>Strong:</strong> MySecurePassword123!</p>
+        <p><strong>Very Strong:</strong> MyVerySecurePassword123!@#</p>
+    </div>
+</body>
+</html>

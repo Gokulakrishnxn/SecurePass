@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecurePass</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="header-left">
+                    <h1>SecurePass</h1>
+                    <p>Password Security Tool</p>
+                </div>
+                <div class="header-right">
+                    <button id="darkModeToggle" class="btn btn-outline" title="Toggle dark mode">
+                        <span id="darkModeIcon">🌙</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Password Checker Section -->
+            <section class="password-checker">
+                <h2>Check Password</h2>
+                <div class="input-group">
+                    <div class="password-input-container">
+                        <input type="password" id="passwordInput" placeholder="Enter password to check">
+                        <button id="togglePassword" class="btn btn-icon" title="Show/Hide password">
+                            <span class="eye-icon">👁️</span>
+                        </button>
+                    </div>
+                    <button id="checkBtn" class="btn btn-primary">Check</button>
+                </div>
+                
+                <div id="strengthResult" class="result hidden">
+                    <div class="strength-display">
+                        <div class="strength-indicator">
+                            <div class="strength-bar">
+                                <div id="strengthBar" class="strength-fill"></div>
+                            </div>
+                            <div class="strength-info">
+                                <span id="strengthText" class="strength-text"></span>
+                                <span id="strengthPercentage" class="strength-percentage"></span>
+                            </div>
+                        </div>
+                        
+                        <div id="strengthDetails" class="strength-details"></div>
+                        
+                        <div id="breachResult" class="breach-result"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Password Generator Section -->
+            <section class="password-generator">
+                <h2>Generate Password</h2>
+                <div class="generator-controls">
+                    <div class="control-group">
+                        <label for="passwordLength">Length: <span id="lengthValue">16</span></label>
+                        <input type="range" id="passwordLength" min="8" max="32" value="16">
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" id="includeSymbols" checked>
+                            Include symbols
+                        </label>
+                        <label>
+                            <input type="checkbox" id="includeNumbers" checked>
+                            Include numbers
+                        </label>
+                    </div>
+                    
+                    <button id="generateBtn" class="btn btn-primary">Generate</button>
+                </div>
+                
+                <div id="generatedPassword" class="generated-password hidden">
+                    <div class="password-display">
+                        <input type="text" id="generatedPasswordInput" readonly>
+                        <button id="copyBtn" class="btn btn-secondary">Copy</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Actions -->
+            <section class="quick-actions">
+                <h2>Quick Actions</h2>
+                <div class="action-buttons">
+                    <button id="checkCurrentField" class="btn btn-outline">Check Current Field</button>
+                    <button id="fillGenerated" class="btn btn-outline">Fill with Generated</button>
+                </div>
+            </section>
+
+            <!-- Password History Section -->
+            <section class="password-history">
+                <h2>Recent Checks</h2>
+                <div id="passwordHistory" class="history-list">
+                    <p class="no-history">No passwords checked yet</p>
+                </div>
+                <button id="clearHistory" class="btn btn-outline">Clear History</button>
+            </section>
+        </main>
+
+        <footer>
+            <p>Built with security in mind</p>
+            <p><a href="https://gokulakrishnan.dev" target="_blank" rel="noopener noreferrer">Gokulakrishnan.dev</a></p>
+        </footer>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

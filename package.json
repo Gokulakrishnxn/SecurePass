@@ -1,0 +1,22 @@
+{
+  "name": "securepass",
+  "version": "1.0.0",
+  "description": "Professional password strength checker and generator",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo 'Build complete'",
+    "dev": "netlify dev"
+  },
+  "keywords": [
+    "password",
+    "security",
+    "strength-checker",
+    "password-generator",
+    "breach-detection"
+  ],
+  "author": "Gokulakrishnan",
+  "license": "MIT",
+  "devDependencies": {
+    "netlify-cli": "^15.0.0"
+  }
+}
